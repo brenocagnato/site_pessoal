@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breno Cagnato</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
+    <!--CSS Links-->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+</head>
+<body data-barba="wrapper">
+    <div class="overlay"></div>
+    <header class="navbar">
+        <nav>
+            <div class="menu-toggle">
+                <button class="burguer" onclick="toggleMenu()"></button>
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <div class="transition"></div>
+        <div class="wrapper">
+           <div class="overmenu">
+                <div class="overlay-menu">
+                    <div class="menu-item">
+                        <p id="inicio"><a href="/pages/index.html" onclick="setActiveMenuItem('inicio')">Início</a></p>
+                    </div>
+                    <div class="menu-item">
+                        <p id="sobre"><a href="/pages/about.html" onclick="setActiveMenuItem('sobre')">Sobre</a></p>
+                    </div>
+                    <div class="menu-item">
+                        <p id="portfolio"><a href="/pages/portfolio.html" onclick="setActiveMenuItem('portfolio')">Portfólio</a></p>
+                    </div>
+                    <div class="menu-item">
+                        <p id="contato"><a href="/pages/contact.html" onclick="setActiveMenuItem('contato')">Contato</a></p>
+                    </div>
+                </div>
+           </div>
+        </div>
+        <main data-barba="container" data-barba-namespace="Início" class="container">
+            <div class="header">
+                <div class="header-revealer"></div>
+            </div>
+            <div class="footer"></div>
+        </main>
+        <div class="social-icons">
+            <a href="https://github.com/brenocagnato" class="social-icon"><i class="bi bi-github"></i></a>
+            <a href="https://www.instagram.com/eubrenocagnato/" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/brenocagnato/" class="social-icon"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="text">
+            <h1>BRENO</h1>
+            <h1>CAGNATO</h1>
+            <p>Bem vindo a minha página pessoal. Use o <span class="highlight">menu</span> para navegar entre as páginas.</p>
+        </div>
+    </div>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/menu.js"></script>
+</body>
+</html>

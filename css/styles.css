@@ -1,0 +1,290 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E6DADA;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white; /* Define a cor do texto como branco */
+	position: relative;
+	overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/images/index.png") no-repeat center center/cover;
+    opacity: 0.8; /* Ajusta a opacidade da textura */
+    mix-blend-mode: exclusion;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	z-index: 1;
+}
+
+.title {
+    text-align: left;
+    color: white;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+	z-index: 2;
+	position: relative;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o texto à esquerda */
+    font-family: 'Roboto', sans-serif;
+    color: white; /* Garante que o texto esteja branco */
+	z-index: 2;
+}
+
+.highlight {
+    color: rgb(253, 131, 131);
+    font-weight: bold;
+	text-decoration:underline;
+}
+
+h1 {
+    font-size: 6em; /* Aumenta o tamanho da fonte para se assemelhar mais à segunda imagem */
+    margin: 0.2em 0;
+	font-weight: 900;
+}
+
+p {
+    font-size: 1.5em; /* Ajusta o tamanho da fonte para corresponder à segunda imagem */
+	font-weight: 300;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+    gap: 80px;
+    position: absolute;
+    left: -80px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.social-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5em;
+    transition: color 0.3s, transform 0.3s;
+	cursor: pointer;
+}
+
+.social-icon:hover {
+    color: rgb(64, 240, 210);
+    transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+
+/* Barba transitions */
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão de hambúrguer à direita */
+    align-items: center;
+    padding: 1.5em 2em;
+    z-index: 4;
+    background: transparent;
+}
+
+.menu-toggle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.burguer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.75em 2em 1.5em 2em;
+    background: rgba(252, 252, 252, 0);
+    outline: none;
+    border: none;
+    width: 28px;
+    height: 20px;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.burguer::before,
+.burguer::after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    background: white; /* Define a cor branca para as linhas do botão */
+    transition: all 250ms ease-out;
+    will-change: transform;
+}
+
+.burguer::before {
+    transform: translateY(-3px);
+}
+
+.burguer::after {
+    transform: translateY(3px);
+}
+
+.active.burguer::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.active.burguer::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.overmenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none; /* Esconde o menu inicialmente */
+    background-color: #141412;
+    transform: translateY(-100%); /* Esconde o menu inicialmente */
+    transition: transform 0.5s ease; /* Animação de abertura do menu */
+    z-index: 3;
+}
+
+.overmenu.open {
+    display: flex; /* Mostra o menu quando ativo */
+    transform: translateY(0); /* Mostra o menu quando ativo */
+}
+
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item {
+    display: flex;
+    cursor: pointer;
+}
+
+.menu-item p {
+    position: relative;
+    text-align: center;
+    font-family: "Lora";
+    font-size: 12vw;
+    line-height: 90%;
+    will-change: transform;
+    transition: letter-spacing 0.3s;
+    color: #cdc6be;
+}
+
+.menu-item p.active::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    background: #c03f13;
+    width: 100%; /* Ajusta a largura para 100% */
+    height: 12px;
+}
+
+.menu-item p:hover {
+    letter-spacing: 0.075em;
+}
+
+.sub-nav {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5em;
+}
+
+.sub-nav p {
+    font-family: "Lora";
+    font-size: 20px;
+    color: #cdc6be;
+}
