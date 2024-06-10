@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="/css/sobre.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+</head>
+<body data-barba="wrapper">
+    <div class="overlay"></div>
+    <header class="navbar">
+        <nav>
+            <div class="menu-toggle">
+                <button class="burguer" onclick="toggleMenu()"></button>
+            </div>
+        </nav>
+    </header>
+    <div class="title">
+        <div class="transition"></div>
+        <div class="wrapper">
+           <div class="overmenu">
+                <div class="overlay-menu">
+                    <div class="menu-item">
+                        <p id="inicio"><a href="index.html" onclick="setActiveMenuItem('inicio')">Início</a></p>
+                    </div>
+                    <div class="menu-item">
+                        <p id="sobre"><a href="sobre.html" onclick="setActiveMenuItem('sobre')">Sobre</a></p>
+                    </div>
+                    <div class="menu-item">
+                        <p id="portfolio"><a href="portfolio.html" onclick="setActiveMenuItem('portfolio')">Portfólio</a></p>
+                    </div>
+                    <div class="menu-item">
+                        <p id="contato"><a href="contact.html" onclick="setActiveMenuItem('contato')">Contato</a></p>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+    <div class="content">
+        <h1 class="page-title">Sobre mim</h1>
+        <div class="info-container">
+            <div class="info-box">
+                <!-- Conteúdo da caixa de informação esquerda -->
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia laborum omnis perferendis vel illum, eos sapiente quam voluptatum iste quasi beatae dolorem eum accusantium ratione error odit laudantium natus explicabo.<br><Br>
+                Fuga voluptatum itaque tenetur aspernatur ipsa ullam consequuntur officia, nihil perferendis odio rem quam, laboriosam, quis incidunt reiciendis eum autem ex commodi. Et quas eveniet aliquam tenetur. Corrupti, voluptas doloribus?<br><br>
+                Natus vel ipsa possimus, rerum magnam illo sed, inventore aliquid ipsum eaque odio tempore. Delectus, quidem? Porro distinctio ipsa dolorem et eaque adipisci aliquam. Itaque minus repudiandae eligendi fuga quae.<br><br>
+                Suscipit id dolorem illum voluptatem nulla odit fuga ea, doloremque tempore sequi vero veniam fugit atque voluptate officiis et rerum ipsam veritatis quo asperiores?<br><br> Ea iusto natus quaerat amet? Consectetur!</p>
+            </div>
+            <div class="info-box">
+                <!-- Conteúdo da caixa de informação direita -->
+                <p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia laborum omnis perferendis vel illum, eos sapiente quam voluptatum iste quasi beatae dolorem eum accusantium ratione error odit laudantium natus explicabo.<br><Br>
+                    Fuga voluptatum itaque tenetur aspernatur ipsa ullam consequuntur officia, nihil perferendis odio rem quam, laboriosam, quis incidunt reiciendis eum autem ex commodi. Et quas eveniet aliquam tenetur. Corrupti, voluptas doloribus?<br><br>
+                    Natus vel ipsa possimus, rerum magnam illo sed, inventore aliquid ipsum eaque odio tempore. Delectus, quidem? Porro distinctio ipsa dolorem et eaque adipisci aliquam. Itaque minus repudiandae eligendi fuga quae.<br><br>
+                    Suscipit id dolorem illum voluptatem nulla odit fuga ea, doloremque tempore sequi vero veniam fugit atque voluptate officiis et rerum ipsam veritatis quo asperiores?<br><br> Ea iusto natus quaerat amet? Consectetur!</p></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/CSSRulePlugin.min.js"></script>
+    <script src="/js/menu.js"></script>
+</body>
+</html>

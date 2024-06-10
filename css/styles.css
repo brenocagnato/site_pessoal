@@ -82,7 +82,7 @@ body {
 
 .title {
     text-align: left;
-    color: white;
+    color: rgb(255, 255, 255);
     width: 80%;
     max-width: 800px;
     padding: 20px;
@@ -191,7 +191,7 @@ nav {
     width: 40px;
     height: 2px;
     position: absolute;
-    background: white; /* Define a cor branca para as linhas do botão */
+    background: rgb(248, 85, 85); /* Define a cor branca para as linhas do botão */
     transition: all 250ms ease-out;
     will-change: transform;
 }
@@ -237,7 +237,7 @@ nav {
     width: 100vw;
     height: 100vh;
     display: flex;
-    gap: 1em;
+    gap: 2em;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -250,10 +250,10 @@ nav {
 
 .menu-item p {
     position: relative;
-    text-align: center;
-    font-family: "Lora";
-    font-size: 12vw;
-    line-height: 90%;
+    text-align: left;
+    font-family: "Roboto";
+    font-size: 2vw;
+    line-height: 100%;
     will-change: transform;
     transition: letter-spacing 0.3s;
     color: #cdc6be;
@@ -267,7 +267,7 @@ nav {
     transform: translateY(-50%);
     background: #c03f13;
     width: 100%; /* Ajusta a largura para 100% */
-    height: 12px;
+    height: 3px;
 }
 
 .menu-item p:hover {
